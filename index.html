@@ -2,11 +2,13 @@
 <html> <!--This is the HTML main tag-->
 <head> <!--This is the head tag were we put our title, script, and all other relative information to the page.-->
     <title>index.html</title>
+	<div class="content">
     <style>
         /* Body Style */
         body <!--This is where all of the page content will go--> 
 		{
-            font-family: Calibri, sans-serif;
+            font-family: Tahoma;
+			color: darkblue;
             margin: 0;
             padding: 0;
         }
@@ -27,7 +29,7 @@
             color: white;
             padding: 14px 20px;
             text-decoration: none;
-			font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif"
+			font-family: Tahoma;
         }
         nav ul li a:hover {
             background-color: #FFB86A;
@@ -37,10 +39,23 @@
             color: #1c398e; /* navy blue color */ <!--I want the headers a different font and color than the body text-->
         }
 		h1 {text-align: center}
-		
+		h2 {text-align: center}
         main {
             padding: 20px;
         }
+		.contactme {
+			font-family: Georgia;
+			font-weight:bold;
+			text-align: center;
+			color:coral
+		}
+		.text {
+			font-family:Tahoma;
+			color:lightseagreen;
+		}
+		.content {
+			background-color:antiquewhite;
+		}
     </style>
 </head>
 <body>
@@ -60,8 +75,9 @@
 
     <!-- Header on homepage -->
     <header>
+		<div content></div>
         <h1>Welcome to Sun, Sand & Fantasy Land Vacations</h1> 
-		<p>Planning a trip should be as exciting and the getaway itself, and I am here to make the process smooth, fun, and tailored just for you. </p>
+		<p class="text">Planning a trip should be as exciting and the getaway itself, and I am here to make the process smooth, fun, and tailored just for you. </p>
 		<!--adding logo-->
 <html>
 <head>
@@ -76,14 +92,15 @@ html, body {
 	</style>
 </head>
 	<body>	
-
 <img class="one" src="images/FullLogo.jpg" width="300" height="300">
 	<main>
 			 
         <h2>Welcome!</h2>
-        <p>Hi, I'm Tina!  I am a passionate traveler turned travel agent who knows that the best memories come from the journeys we take together.  While I am new to the travel industry professionally, my love for exploring the world with my own family has given me a firsthand insight into what makes a vacation truly unforgettable.</p>
-		<p> Whether you're dreaming of sun-soaked beaches or fairytale castles, I specialize in crafting personalized vacations for families.  I believe that planning a trip should be just as exciting as the getaway itself, and I am here to make the process smooth, fun, and tailored just for you.</p>
-		<p>Let's create your next adventure - one that is full of connection, joy, and a little magic.</p>
+        <p class="text">Hi, I'm Tina!  I am a passionate traveler turned travel agent who knows that the best memories come from the journeys we take together.  While I am new to the travel industry professionally, my love for exploring the world with my own family has given me a firsthand insight into what makes a vacation truly unforgettable.</p>
+		<p class="text"> Whether you're dreaming of sun-soaked beaches or fairytale castles, I specialize in crafting personalized vacations for families.  I believe that planning a trip should be just as exciting as the getaway itself, and I am here to make the process smooth, fun, and tailored just for you.</p>
+		<p class ="text">Let's create your next adventure - one that is full of connection, joy, and a little magic.
+		<p class="contactme">Contact me for more information.</p> <!--created a class-->
+	</p>
 </main>
 </body>
 </html>

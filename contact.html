@@ -3,11 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <title>contact</title>
+	<div class= "content">
 <style>
         /* Body Style */
         body 
 		{
-            font-family: Calibri, sans-serif;
+            font-family: Tahoma;
+			color:darkblue
             margin: 0;
             padding: 0;
         }
@@ -37,11 +39,19 @@
             font-family: "Brush Script MT", cursive; /* cursive-like font */
             color: #1c398e; /* navy blue color */ <!--I want the headers a different font and color than the body text-->
         }
+		
 		h1 {text-align: center}
 		
         main {
             padding: 20px;
         }
+		.text {
+			font-family:Tahoma;
+			color:lightseagreen;
+		}
+		.content {
+			background-color:antiquewhite;
+		}
     </style>
 </head>
 <body>
@@ -60,9 +70,9 @@
     </nav>
 
     <h1>Contact me</h1>
-<hi>Hi, I am Tina Dupre.</hi>
-<p>Owner of <b>Sun, Sand &amp; Fantasy Land Vacations</b>.
-	Please feel free to contact me if you are interested in more information about my travel services.</p>
+<p class ="text"> <hi>Hi, I am Tina Dupre.</hi>
+<p class ="text"> Owner of <b>Sun, Sand &amp; Fantasy Land Vacations</b>.</p>
+	<p class ="text"> Please feel free to <i>contact me</i> if you are interested in more information about my travel services.</p>
 	<p>
 	<input type="email" placeholder="Your email">
 	<input type="submit">
