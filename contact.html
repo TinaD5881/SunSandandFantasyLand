@@ -90,26 +90,31 @@
 	<input type="email" placeholder="Your email">
 	<input type="submit">
 		   </p>
-	<div class="fb-like" 
-		 data-href="https://www.facebook.com/SunSandandFantasyLandVacations" 
-		 data-width="" 
-		 data-layout="" 
-		 data-action="" 
-		 data-size="" 
-		 data-share="true">
-		</div>
-	  </div>
-</body>
-</html>
-		<meta charset="UTF-8">
-<title>contact</title>
-	<div class= "content">
-		<div id="fb-root"></div>
+	<div class="container my-4">
+  <div class="content-box">
+    <h2>Follow Us on Facebook!</h2>
+    <p class="text">Like our page to stay up to date with the latest vacation information and specials.</p>
+    
+    <!-- Centered FB Like Button -->
+    <div style="max-width: 350px; margin: 0 auto; text-align: center;">
+      <div class="fb-like"
+           data-href="https://www.facebook.com/SunSandandFantasyLandVacations"
+           data-width="300"
+           data-layout="standard"
+           data-action="like"
+           data-size="small"
+           data-share="false">
+      </div>
+    </div>
+  </div>
+</div>
 
-		<!-- FB SDK -->
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v23.0"></script>
-
-  <!-- Bootstrap JS -->
+<!-- Facebook SDK (keep this just before </body>) -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" 
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v23.0"></script>
+ 
+		<!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
