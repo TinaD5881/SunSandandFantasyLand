@@ -3,151 +3,137 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Page</title>
+  <title>Home Page</title>
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
+    /* Sunset gradient background */
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(to bottom,
+        #faebd7,  /* antique white */
+        #ffd9b3,  /* peach */
+        #ffb6b9,  /* soft rose */
+        #d6a4dd,  /* lavender */
+        #a2c2e6   /* soft sky blue */
+      ) no-repeat fixed;
+      background-size: cover;
+      font-family: Tahoma, sans-serif;
+      color: darkblue;
+    }
+
+    /* Banner image */
     .banner-img {
       width: 100%;
-      height: 300px;           /* adjust as needed */
-      object-fit: cover;       /* keeps proportions and fills width */
-      object-position: center; /* keeps center of image visible */
+      height: 800px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* Content box */
+    .content-box {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Logo */
+    .logo {
+      display: block;
+      margin: 20px auto;
+      max-width: 300px;
+      height: auto;
+    }
+
+    /* Headers */
+    h1, h2, h3 {
+      font-family: "Brush Script MT", cursive;
+      color: #1c398e;
+      text-align: center;
+    }
+
+    /* Custom text classes */
+    .text {
+      font-family: Tahoma, sans-serif;
+      color: lightseagreen;
+    }
+
+    .contactme {
+      font-family: Georgia, serif;
+      font-weight: bold;
+      text-align: center;
+      color: coral;
     }
   </style>
 </head>
 <body>
+
+  <!-- Navigation Menu -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Sun, Sand & Fantasy Land Vacations</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Index</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Disney</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Cruise</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">All Inclusive</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Transportation</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <!-- Banner -->
   <div class="container-fluid p-0">
     <img src="images/banner.jpg" alt="Banner" class="banner-img">
   </div>
 
-  <!-- Content -->
+  <!-- Page Content -->
   <div class="container my-4">
-  <div class="bg-light p-3">
-    <p>Your page content goes here. It will automatically fit the screen width.</p>
+    <div class="content-box">
+      <h1>Welcome to Sun, Sand & Fantasy Land Vacations</h1>
+      <p class="text">Planning a trip should be as exciting as the getaway itself, and I am here to make the process smooth, fun, and tailored just for you.</p>
+
+      <!-- Logo -->
+      <img class="logo" src="images/FullLogo.jpg" alt="Logo">
+
+      <h2>Welcome!</h2>
+      <p class="text">Hi, I'm Tina! I am a passionate traveler turned travel agent who knows that the best memories come from the journeys we take together. While I am new to the travel industry professionally, my love for exploring the world with my own family has given me a firsthand insight into what makes a vacation truly unforgettable.</p>
+
+      <p class="text">Whether you're dreaming of sun-soaked beaches or fairytale castles, I specialize in crafting personalized vacations for families. I believe that planning a trip should be just as exciting as the getaway itself, and I am here to make the process smooth, fun, and tailored just for you.</p>
+
+      <p class="text">Let's create your next adventure — one that is full of connection, joy, and a little magic.</p>
+
+      <p class="contactme">Contact me for more information.</p>
+
+      <!-- Facebook Like Button -->
+      <div id="fb-root"></div>
+      <div class="fb-like" 
+           data-href="https://www.facebook.com/SunSandandFantasyLandVacations" 
+           data-width="" 
+           data-layout="" 
+           data-action="" 
+           data-size="" 
+           data-share="false"></div>
+    </div>
   </div>
-</div>
-</body>
-</html>
 
- <!-- Bootstrap JS -->
+  <!-- FB SDK -->
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v23.0"></script>
+
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-	<link href="main.css" rel="stylesheet" type="text/css">
- 
-    <h1>Hello, world!</h1>
-
-  
-  </body>
-</html>
-    <title>index.html</title>
-	<div class="content">
-    <style>
-        /* Body Style */
-        body <!--This is where all of the page content will go--> 
-		{
-            font-family: Tahoma;
-			color: darkblue;
-            margin: 0;
-            padding: 0;
-        }
-        nav {
-            background-color: #162456;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin: 0;
-        }
-        nav ul li a {
-            display: block;
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-			font-family: Tahoma;
-        }
-        nav ul li a:hover {
-            background-color: #FFB86A;
-        }
-		h1, h2, h3 {
-            font-family: "Brush Script MT", cursive; /* cursive-like font */
-            color: #1c398e; /* navy blue color */ <!--I want the headers a different font and color than the body text-->
-        }
-		h1 {text-align: center}
-		h2 {text-align: center}
-        main {
-            padding: 20px;
-        }
-		.contactme {
-			font-family: Georgia;
-			font-weight:bold;
-			text-align: center;
-			color:coral
-		}
-		.text {
-			font-family:Tahoma;
-			color:lightseagreen;
-		}
-		.content {
-			background-color:antiquewhite;
-		}
-    </style>
-</head>
-<body>
-	<div id="fb-root">
-	</div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v23.0&appId=APP_ID"></script>
-    <!-- Navigation Menu -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="services.html">Services</a></li>
-			<li><a href="disney.html">Disney</a></li>
-			<li><a href="cruise.html">Cruises</a></li>
-			<li><a href="allinclusive.html">All-Inclusive Vacations</a></li>
-			<li><a href="transportation.html">Transportation</a></li>
-			<li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Header on homepage -->
-    <header>
-		<div content></div>
-        <h1>Welcome to Sun, Sand & Fantasy Land Vacations</h1> 
-		<p class="text">Planning a trip should be as exciting and the getaway itself, and I am here to make the process smooth, fun, and tailored just for you. </p>
-		<!--adding logo-->
-<html>
-<head>
-<style>
-html, body {
-  height: 100%;
-}
-		img.one  height: 50%;
-  width: 50%;
-}
-	
-	</style>
-</head>
-	<body>	
-<img class="one" src="images/FullLogo.jpg" width="300" height="300">
-	<main>
-			 
-        <h2>Welcome!</h2>
-        <p class="text">Hi, I'm Tina!  I am a passionate traveler turned travel agent who knows that the best memories come from the journeys we take together.  While I am new to the travel industry professionally, my love for exploring the world with my own family has given me a firsthand insight into what makes a vacation truly unforgettable.</p>
-		<p class="text"> Whether you're dreaming of sun-soaked beaches or fairytale castles, I specialize in crafting personalized vacations for families.  I believe that planning a trip should be just as exciting as the getaway itself, and I am here to make the process smooth, fun, and tailored just for you.</p>
-		<p class ="text">Let's create your next adventure - one that is full of connection, joy, and a little magic.
-		<p class="contactme">Contact me for more information.</p> <!--created a class-->
-	
-		<div class="fb-like" data-href="https://www.facebook.com/SunSandandFantasyLandVacations" data-width="20" data-layout="" data-action="" data-size="" data-share="false"></div>
-		</p><!--added a fb Like button-->
-</main>
 </body>
 </html>
-
