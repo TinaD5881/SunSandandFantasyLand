@@ -1,80 +1,147 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<!--This is the navigation header customization.-->
-<meta charset="UTF-8">
-<title>disney</title>
-	<div class="content">
-	<style>
-        /* Body Style */
-        body 
-		{
-            font-family: Tahoma;
-			color:darkblue
-            margin: 0;
-            padding: 0;
-        }
-        nav {
-            background-color: #162456;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin: 0;
-        }
-        nav ul li a {
-            display: block;
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-			font-family: Tahoma;
-        }
-        nav ul li a:hover {
-            background-color: #FFB86A;
-        }
-		h1, h2, h3 {
-            font-family: "Brush Script MT", cursive; /* cursive-like font */
-            color: #1c398e; /* navy blue color */ <!--I want the headers a different font and color than the body text-->
-        }
-		h1 {text-align: center}
-		
-        main {
-            padding: 20px;
-        }
-		.text {
-			font-family:Tahoma;
-			color:lightseagreen;
-		}
-		.content {
-			background-color:antiquewhite;
-		}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disney Vacations</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Sunset gradient background */
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(to bottom,
+        #faebd7,  /* antique white */
+        #ffd9b3,  /* peach */
+        #ffb6b9,  /* soft rose */
+        #d6a4dd,  /* lavender */
+        #a2c2e6   /* soft sky blue */
+      ) no-repeat fixed;
+      background-size: cover;
+      font-family: Tahoma, sans-serif;
+      color: darkblue;
+    }
+
+    /* Content box */
+    .content-box {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+
+    /* Headers */
+    h1, h2, h3 {
+      font-family: "Brush Script MT", cursive;
+      color: #1c398e;
+      text-align: center;
+    }
+
+    /* Text */
+    .text {
+      font-family: Tahoma, sans-serif;
+      color: lightseagreen;
+    }
+
+    /* Float images for wrapping */
+    .disney-photo-left {
+      float: left;
+      max-width: 300px;
+      margin: 0 15px 15px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .disney-photo-right {
+      float: right;
+      max-width: 300px;
+      margin: 0 0 15px 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 <body>
-	<!-- Same navigation menu links so users can click between pages -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-			<li><a href="disney.html">Disney</a></li>
-			<li><a href="cruise.html">Cruises</a></li>
-			<li><a href="allinclusive.html">All-Inclusive Vacations</a></li>
-			<li><a href="transportation.html">Transportation</a></li>
-            <li><a href="contact.html">Contact</a></li>
+	
+  <!-- Navigation Menu -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Sun, Sand & Fantasy Land Vacations</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+         <li class="nav-item"><a class="nav-link active" href="disney.html">Disney</a></li>
+         <li class="nav-item"><a class="nav-link" href="cruise.html">Cruise</a></li>
+         <li class="nav-item"><a class="nav-link" href="all-inclusive.html">All Inclusive</a></li>
+         <li class="nav-item"><a class="nav-link" href="transportation.html">Transportation</a></li>
+         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
-    </nav>
+      </div>
+    </div>
+  </nav>
+	
+  <!-- Page Content -->
+  <div class="container my-4">
 
-    <h1>Disney</h1>
-	<p class="text">Disney has many different locations, as well as a cruise line. These destinations include:		
-	<ul>Walt Disney World in Orlando, Florida</ul>
-	<ul>Disneyland in California</ul>
-	<ul>Aulani Disney Resort in Hawaii</ul>
-	<ul>Disney Cruise Lines</ul>
-	<ul><b><b>Anytime in Disney is a <i>MAGICAL</i> time!</b></b></ul>
+    <!-- Section 1 -->
+    <div class="content-box">
+      <h1>Disney Vacations</h1>
+      <img src="images/walt.jpeg" alt="Walt Disney and Minnie Statue" class="disney-photo-left">
+      <p class="text">
+        Experience the wonder of Disney, where imagination comes to life! From walking down Main Street U.S.A. 
+        with Cinderella’s Castle in the distance to enjoying magical moments with beloved characters, 
+        every trip to Disney feels like stepping into a storybook.
+      </p>
+      <p class="text">
+        I’ll help you plan the perfect Disney getaway — including where to stay, where to eat, and how to 
+        make the most of your days in the parks without stress.
+      </p>
+      <div style="clear: both;"></div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="content-box">
+      <h2>Magical Moments</h2>
+      <img src="images/mickeyminnie.jpg" alt="Mickey and Minnie" class="disney-photo-right">
+      <p class="text">
+        Whether it’s your child’s first hug from Mickey or your family watching fireworks together, 
+        Disney magic is all about creating memories that last a lifetime.
+      </p>
+      <p class="text">
+        My job is to make sure your Disney vacation is sprinkled with those unforgettable moments —
+        without the stress of planning.
+      </p>
+      <div style="clear: both;"></div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="content-box">
+      <h2>Beyond the Parks</h2>
+      <img src="images/epcot.jpg" alt="Epcot" class="disney-photo-left">
+      <p class="text">
+        Disney isn’t just about theme parks. Explore EPCOT’s global adventures, enjoy an island escape at 
+        Aulani in Hawaii, or take to the seas with Disney Cruise Line.
+      </p>
+      <p class="text">
+        No matter which Disney destination you choose, I’ll be with you every step of the way to make your 
+        trip as seamless and magical as possible.
+      </p>
+      <div style="clear: both;"></div>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
