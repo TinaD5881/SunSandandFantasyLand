@@ -1,84 +1,166 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<!--This is the navigation header customization.-->
-<meta charset="UTF-8">
-<title>cruise</title>
-	<div class="content">
-	<style>
-        /* Body Style */
-        body 
-		{
-            font-family: Tahoma;
-			color:darkblue;
-            margin: 0;
-            padding: 0;
-        }
-        nav {
-            background-color: #162456;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin: 0;
-        }
-        nav ul li a {
-            display: block;
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-			font-family: Tahoma;
-        }
-        nav ul li a:hover {
-            background-color: #FFB86A;
-        }
-		h1, h2, h3 {
-            font-family: "Brush Script MT", cursive; /* cursive-like font */
-            color: #1c398e; /* navy blue color */ <!--I want the headers a different font and color than the body text-->
-        }
-		h1 {text-align: center}
-		
-        main {
-            padding: 20px;
-		}
-		.text {
-			font-family:Tahoma;
-			color:lightseagreen;
-		}
-		.content {
-			background-color:antiquewhite;
-		}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cruise</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    /* Background gradient */
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(to bottom,
+        #faebd7,  /* antique white */
+        #ffd9b3,  /* peach */
+        #ffb6b9,  /* soft rose */
+        #d6a4dd,  /* lavender */
+        #a2c2e6   /* soft sky blue */
+      ) no-repeat fixed;
+      background-size: cover;
+      font-family: Tahoma, sans-serif;
+      color: darkblue;
+    }
+
+    /* Content box */
+    .content-box {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+
+    /* Headers */
+    h1, h2 {
+      font-family: "Brush Script MT", cursive;
+      color: #1c398e;
+      text-align: center;
+    }
+
+    /* Text */
+    .text {
+      font-family: Tahoma, sans-serif;
+      color: lightseagreen;
+    }
+
+    /* Cruise list with icons */
+    .cruise-list li {
+      margin-bottom: 8px;
+    }
+    .cruise-list i {
+      color: #1c398e; /* navy blue */
+      margin-right: 8px;
+    }
+
+    /* Bottom centered image */
+    .bottom-image {
+      display: block;
+      margin: 40px auto 0 auto;
+      max-width: 350px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+	  /* Custom Navbar Styling */
+.navbar-custom {
+  background-color: #001f4d; /* Navy */
+}
+
+.navbar-custom .navbar-brand {
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  color: white;
+  margin: 0 5px;
+  border-radius: 20px;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.navbar-custom .navbar-nav .nav-link:hover {
+  background-color: coral;
+  color: white;
+}
+
+/* Active page */
+.navbar-custom .navbar-nav .nav-link.active {
+  background-color: coral;
+  color: white;
+}
+
+  </style>
 </head>
 <body>
-	<!-- Same navigation menu links so users can click between pages -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-			<li><a href="disney.html">Disney</a></li>
-			<li><a href="cruise.html">Cruises</a></li>
-			<li><a href="allinclusive.html">All-Inclusive Vacations</a></li>
-			<li><a href="transportation.html">Transportation</a></li>
-            <li><a href="contact.html">Contact</a></li>
+  <!-- Navigation Menu -->
+  
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Sun, Sand & Fantasy Land Vacations</a>
+	  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="disney.html">Disney</a></li>
+          <li class="nav-item"><a class="nav-link active" href="cruise.html">Cruise</a></li>
+          <li class="nav-item"><a class="nav-link" href="allinclusive.html">All-Inclusive Vacations</a></li>
+          <li class="nav-item"><a class="nav-link" href="transportation.html">Transportation</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
-    </nav>
+      </div>
+    </div>
+  </nav>
 
-    <h1>Cruise</h1>
-	<p class="text"> If you like visiting new countries and exploring new destinations, booking a cruise may be a good option for you.  There are many different cruise lines and each one has a specialty to it.  As we discuss your vacation wish-list, we can determine what cruise line is right for you.  Some popular cruise lines are:
-			  
-	<ul>- Carnival Cruise Line</ul>
-	<ul>- Royal Caribbean</ul>
-	<ul>- Norweigan Cruise Line</ul>
-	<ul>- Disney Cruise Lines</ul>
-	<ul>- Margaritaville at Sea</ul>
-	<ul>- Virgin Voyages</ul>
-	<ul>- Princess Cruise Lines</ul>
-	<ul><b><b>...and many others.</b></b></ul>
+  <!-- Page Content -->
+  <div class="container">
+    <div class="content-box">
+      <h1>Cruise Vacations</h1>
+      <p class="text">
+        Imagine waking up to a new view every morning — one day a tropical island, the next a bustling European port. 
+        Cruises are an amazing way to explore multiple destinations while only unpacking once. With endless activities, 
+        entertainment, and dining options on board, there is truly something for everyone.
+      </p>
+      <p class="text">
+        Whether you're traveling as a couple, with family, or with friends, cruise vacations offer a mix of relaxation, 
+        adventure, and luxury. From thrilling waterslides and Broadway-style shows to quiet spas and candlelit dinners, 
+        there’s always the perfect balance waiting at sea.
+      </p>
+
+      <h2>Popular Cruise Lines</h2>
+      <ul class="text cruise-list">
+        <li><i class="bi bi-anchor"></i>Carnival Cruise Line</li>
+        <li><i class="bi bi-anchor"></i>Royal Caribbean</li>
+        <li><i class="bi bi-anchor"></i>Norwegian Cruise Line</li>
+        <li><i class="bi bi-anchor"></i>Disney Cruise Lines</li>
+        <li><i class="bi bi-anchor"></i>Margaritaville at Sea</li>
+        <li><i class="bi bi-anchor"></i>Virgin Voyages</li>
+        <li><i class="bi bi-anchor"></i>Princess Cruise Lines</li>
+        <li><i class="bi bi-anchor"></i><b>...and many others.</b></li>
+      </ul>
+
+      <div class="text-center mt-4">
+        <button type="button" class="btn btn-primary">Click here to find out more</button>
+      </div>
+    </div>
+
+    <!-- Bottom Image -->
+    <img src="images/celebration.jpg" alt="Cruise Ship" class="bottom-image">
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
