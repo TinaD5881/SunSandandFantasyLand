@@ -157,8 +157,35 @@
     </div>
 
     <!-- Bottom Image -->
+	<div class="content-box">  
     <img src="images/celebration.jpg" alt="Cruise Ship" class="bottom-image">
+		 <div style="clear: both;"></div>
   </div>
+	  <!-- Disney Cruise Line Video -->
+	  <div class="content-box"> 
+	  <div style="text-align:center"> 
+      <button onclick="playPause()">Play/Pause
+		  </button> 
+		  <br><br>
+  <video id="video1" width="420">
+    <source src="/images/wish.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+</div> 
+
+<script> 
+var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+		  </script> 
+		   <div style="clear: both;"></div>
+    </div>
+	</div>	  
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
