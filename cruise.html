@@ -152,25 +152,40 @@
       </ul>
            <!-- Button to Form -->
       <div class="text-center mt-4">
-        <button onclick=navigateToPage() 
-		">Click here to request information.
-		 </button>
-			<script>
-      function
-		 navigateToPage() {
-		 window.loctation.href= 'https://docs.google.com/forms/d/1DbSeTcCUfoKONgoO_aKakukEkI4n1k1-43CS6i108jg/edit'; 
-		  // 
-		  <button type="button" class="btn btn-primary
-}
-				</script>
-      </div>
-    </div>
+        <div id="button-container" class="text-center mt-4"></div>
 
-    <!-- Bottom Image -->
-	<div class="content-box">  
-    <img src="images/celebration.jpg" alt="Cruise Ship" class="bottom-image">
-		 <div style="clear: both;"></div>
-  </div>
+  <script>
+    // Create the button
+    const button = document.createElement("button");
+    button.textContent = "Click here to request information";
+    button.className = "btn btn-primary"; 
+    button.type = "button";
+
+    // Default styling
+    button.style.transition = "all 0.3s ease";  // smooth effect
+
+    // Hover in (mouse over)
+    button.addEventListener("mouseenter", () => {
+      button.style.backgroundColor = "#0057b3"; // darker blue
+      button.style.transform = "scale(1.05)";  // slight grow
+      button.style.boxShadow = "0px 4px 12px rgba(0,0,0,0.2)";
+    });
+
+    // Hover out (mouse leave)
+    button.addEventListener("mouseleave", () => {
+      button.style.backgroundColor = "#0d5efd"; // Bootstrap default
+      button.style.transform = "scale(1)";
+      button.style.boxShadow = "none";
+    });
+
+    // Click event → redirect
+    button.addEventListener("click", () => {
+      window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSe_eF86cZVBiQ17LmC6guifYMDnwLdOK2tEmn0IdoU98z37UA/viewform?usp=header";
+    });
+
+    // Insert into page
+    document.getElementById("button-container").appendChild(button);
+  </script>
 	  <!-- Disney Cruise Line Video -->
 	  <div class="content-box"> 
 	  <div style="text-align:center"> 
