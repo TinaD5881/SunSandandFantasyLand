@@ -147,24 +147,46 @@
       <p class="text">Whether you're dreaming of sun-soaked beaches or fairytale castles, I specialize in crafting personalized vacations for families. I believe that planning a trip should be just as exciting as the getaway itself, and I am here to make the process smooth, fun, and tailored just for you.</p>
 
       <p class="text">Let's create your next adventure — one that is full of connection, joy, and a little magic.</p>
+		
+      <!-- Button to Form -->
+      <div class="text-center mt-4">
+        <div id="button-container" class="text-center mt-4"></div>
 
-      <p class="contactme">Contact me for more information.</p>
+  <script>
+    // Create the button
+    const button = document.createElement("button");
+    button.textContent = "Click here to request information";
+    button.className = "btn btn-primary"; 
+    button.type = "button";
 
-     <!-- Facebook Like Button -->
-<div class="fb-like"
-     data-href="https://www.facebook.com/SunSandandFantasyLandVacations"
-     data-width=""
-     data-layout="button"
-     data-action="like"
-     data-size="large"
-     data-share="true">
-</div>
+    // Default styling
+    button.style.transition = "all 0.3s ease";  // smooth effect
 
-<!-- Facebook SDK -->
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" 
-        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v23.0">
-</script>
+    // Hover in (mouse over)
+    button.addEventListener("mouseenter", () => {
+      button.style.backgroundColor = "#0057b3"; // darker blue
+      button.style.transform = "scale(1.05)";  // slight grow
+      button.style.boxShadow = "0px 4px 12px rgba(0,0,0,0.2)";
+    });
+
+    // Hover out (mouse leave)
+    button.addEventListener("mouseleave", () => {
+      button.style.backgroundColor = "#0d5efd"; // Bootstrap default
+      button.style.transform = "scale(1)";
+      button.style.boxShadow = "none";
+    });
+
+    // Click event → redirect
+    button.addEventListener("click", () => {
+      window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSe_eF86cZVBiQ17LmC6guifYMDnwLdOK2tEmn0IdoU98z37UA/viewform?usp=header";
+    });
+
+    // Insert into page
+    document.getElementById("button-container").appendChild(button);
+  </script>
+		  
+		
+
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
