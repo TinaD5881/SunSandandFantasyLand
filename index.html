@@ -14,11 +14,11 @@
       min-height: 100vh;
       margin: 0;
       background: linear-gradient(to bottom,
-        #faebd7,  /* antique white */
-        #ffd9b3,  /* peach */
-        #ffb6b9,  /* soft rose */
-        #d6a4dd,  /* lavender */
-        #a2c2e6   /* soft sky blue */
+        #faebd7,
+        #ffd9b3,
+        #ffb6b9,
+        #d6a4dd,
+        #a2c2e6
       ) no-repeat fixed;
       background-size: cover;
       font-family: Tahoma, sans-serif;
@@ -26,12 +26,12 @@
     }
 
     /* Banner image */
-   .banner-img {
-  width: 100%;
-  height: auto;           /* scales naturally with width */
-  object-fit: cover;      /* fills width, maintains aspect ratio */
-  object-position: center; /* centers the image */
-}
+    .banner-img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+    }
 
     /* Content box */
     .content-box {
@@ -43,11 +43,11 @@
 
     /* Logo */
     .logo {
-  display: block;
-  margin: 20px auto;
-  max-width: 150px;  /* smaller than 300px */
-  height: auto;
-}
+      display: block;
+      margin: 20px auto;
+      max-width: 150px;
+      height: auto;
+    }
 
     /* Headers */
     h1, h2, h3 {
@@ -56,101 +56,52 @@
       text-align: center;
     }
 
-    /* Custom text classes */
-    .text {
-      font-family: Tahoma, sans-serif;
-      color: lightseagreen;
-    }
-	  /* Successful Submission */
-#successMessage {
-      display: none;
-      margin-top: 15px;
-      padding: 10px;
-      border: 1px solid #4CAF50;
-      background-color: #DFF2BF;
-      color: #4F8A10;
-      border-radius: 8px;
-      animation: fadeIn 0.6s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    .text { color: lightseagreen; }
+
     .contactme {
       font-family: Georgia, serif;
       font-weight: bold;
       text-align: center;
       color: coral;
     }
-	  /* Custom Navbar Styling */
-.navbar-custom {
-  background-color: #001f4d; /* Navy */
-}
 
-.navbar-custom .navbar-brand {
-  color: white;
-  font-weight: bold;
-}
+    /* Custom Navbar Styling */
+    .navbar-custom { background-color: #001f4d; }
+    .navbar-custom .navbar-brand { color: white; font-weight: bold; }
+    .navbar-custom .navbar-nav .nav-link {
+      color: white; margin: 0 5px; border-radius: 20px; padding: 8px 16px; transition: background-color 0.3s ease;
+    }
+    .navbar-custom .navbar-nav .nav-link:hover,
+    .navbar-custom .navbar-nav .nav-link.active { background-color: coral; color: white; }
 
-.navbar-custom .navbar-nav .nav-link {
-  color: white;
-  margin: 0 5px;
-  border-radius: 20px;
-  padding: 8px 16px;
-  transition: background-color 0.3s ease;
-}
-
-/* Hover effect */
-.navbar-custom .navbar-nav .nav-link:hover {
-  background-color: coral;
-  color: white;
-}
-
-/* Active page */
-.navbar-custom .navbar-nav .nav-link.active {
-  background-color: coral;
-  color: white;
-}
-/* Testimonial Area */
-	  
-	button[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-}
-
-button[type="submit"]:hover {
-    background-color: #0056b3;
-}
+    /* Submit button */
+    button[type="submit"] {
+      background-color: #007bff; color: white; padding: 12px 20px; border: none; border-radius: 4px;
+      cursor: pointer; font-size: 16px; width: 100%;
+    }
+    button[type="submit"]:hover { background-color: #0056b3; }
   </style>
 </head>
 <body>
 
   <!-- Navigation Menu -->
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Sun, Sand & Fantasy Land Vacations</a>
-	  
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Sun, Sand & Fantasy Land Vacations</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-         <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-         <li class="nav-item"><a class="nav-link" href="disney.html">Disney</a></li>
-         <li class="nav-item"><a class="nav-link" href="cruise.html">Cruise</a></li>
-         <li class="nav-item"><a class="nav-link" href="allinclusive.html">All Inclusive</a></li>
-         <li class="nav-item"><a class="nav-link" href="transportation.html">Transportation</a></li>
-         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="disney.html">Disney</a></li>
+          <li class="nav-item"><a class="nav-link" href="cruise.html">Cruise</a></li>
+          <li class="nav-item"><a class="nav-link" href="allinclusive.html">All Inclusive</a></li>
+          <li class="nav-item"><a class="nav-link" href="transportation.html">Transportation</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -162,106 +113,102 @@ button[type="submit"]:hover {
   </div>
 
   <!-- Page Content -->
-  <div class="container">
-	</div>
-    <div class="content-box">
-      <h1>Welcome to Sun, Sand & Fantasy Land Vacations</h1>
-      <p class="text">Planning a trip should be as exciting as the getaway itself, and I am here to make the process smooth, fun, and tailored just for you.</p>
+  <div class="container"></div>
 
-      <!-- Logo -->
-      <img class="logo" src="images/FullLogo.jpg" alt="Logo">
+  <div class="content-box">
+    <h1>Welcome to Sun, Sand & Fantasy Land Vacations</h1>
+    <p class="text">Planning a trip should be as exciting as the getaway itself, and I am here to make the process smooth, fun, and tailored just for you.</p>
 
-      <h2>Welcome!</h2>
-      <p class="text">Hi, I'm Tina! I am a passionate traveler turned travel agent who knows that the best memories come from the journeys we take together. While I am new to the travel industry professionally, my love for exploring the world with my own family has given me a firsthand insight into what makes a vacation truly unforgettable.</p>
+    <!-- Logo -->
+    <img class="logo" src="images/FullLogo.jpg" alt="Logo">
 
-      <p class="text">Whether you're dreaming of sun-soaked beaches or fairytale castles, I specialize in crafting personalized vacations for families. I believe that planning a trip should be just as exciting as the getaway itself, and I am here to make the process smooth, fun, and tailored just for you.</p>
+    <h2>Welcome!</h2>
+    <p class="text">Hi, I'm Tina! I am a passionate traveler turned travel agent who knows that the best memories come from the journeys we take together. While I am new to the travel industry professionally, my love for exploring the world with my own family has given me a firsthand insight into what makes a vacation truly unforgettable.</p>
 
-      <p class="text">Let's create your next adventure — one that is full of connection, joy, and a little magic.</p>
-	  </div>
-      <!-- Button to Form -->
-	<div class="text-center mt-4"></div>
-        <div id="button-container" class="text-center mt-4"></div>
-	
-		  
-		<!--Testimonaial-->  
-		  <p>
-		  </p>
-		  
-		  <p>
-		  </p>
-<div class="content-box">
-		  <h3>Testimonials</h3>
-      <p class="text">If you have ever booked travel with me, I would love to hear from you and how your travel experience was. Please leave your name, email, what services you booked with me, and your honest feedback. </p>
-	  
-	  <p class="text">Anyone who leaves a testimonial is entered into a contest for the month of the entry to earn a $25 gift card from me.</p>
-		  
-      <!--Testimonaial Feedback Form--> 
-	<form id="feedbackForm">	 
-	<title>Feedback Form</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file for styling -->
-</head>
-<body>
+    <p class="text">Whether you're dreaming of sun-soaked beaches or fairytale castles, I specialize in crafting personalized vacations for families. I believe that planning a trip should be just as exciting as the getaway itself, and I am here to make the process smooth, fun, and tailored just for you.</p>
+
+    <p class="text">Let's create your next adventure — one that is full of connection, joy, and a little magic.</p>
+  </div>
+
+  <div class="text-center mt-4"></div>
+  <div id="button-container" class="text-center mt-4"></div>
+
+  <!-- Testimonials -->
+  <div class="content-box mt-4">
+    <h3>Testimonials</h3>
+    <p class="text">If you have ever booked travel with me, I would love to hear from you and how your travel experience was. Please leave your name, email, what services you booked with me, and your honest feedback. </p>
+    <p class="text">Anyone who leaves a testimonial is entered into a contest for the month of the entry to earn a $25 gift card from me.</p>
+
+    <!-- ✅ FIXED: one single form with an ID we can target -->
     <div class="container">
-        <h2>Provide Your Feedback</h2>
-        <form action="#" method="POST"> <!-- The 'action' attribute specifies where to send the form data -->
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
+      <h2>Provide Your Feedback</h2>
 
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
+      <!-- CHANGED: removed nested <form> and kept a single form with id="feedbackForm" -->
+      <form id="feedbackForm" method="POST" action="#">
+        <div class="form-group mb-3">
+          <label for="name">Name:</label>
+          <input class="form-control" type="text" id="name" name="name" required>
+        </div>
 
-            <div class="form-group">
-                <label for="trip_type">Trip Type:</label>
-                <select id="trip_type" name="trip_type">
-                    <option value="Cruise">Cruise</option>
-                    <option value="Hotel/Rental Car Only">Hotel/Rental Car</option>
-                    <option value="All-Inclusive Vacation">All-Inclusive Vacation</option>
-					<option value="Theme Park">Theme Park</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
+        <div class="form-group mb-3">
+          <label for="email">Email:</label>
+          <input class="form-control" type="email" id="email" name="email" required>
+        </div>
 
-            <div class="form-group">
-                <label for="message">Your Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
+        <div class="form-group mb-3">
+          <label for="trip_type">Trip Type:</label>
+          <select class="form-select" id="trip_type" name="trip_type">
+            <option value="Cruise">Cruise</option>
+            <option value="Hotel/Rental Car Only">Hotel/Rental Car</option>
+            <option value="All-Inclusive Vacation">All-Inclusive Vacation</option>
+            <option value="Theme Park">Theme Park</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
 
-            <button type="submit">Submit Feedback</button>
-        </form>
-		<script>
-  document.getElementById("contactForm").addEventListener("submit", function(event){
-    event.preventDefault(); // Stop normal submission
-    alert("✅ Your form was submitted successfully!");
-    this.reset(); // Clear the form
-  });
-</script>
-		
+        <div class="form-group mb-3">
+          <label for="message">Your Message:</label>
+          <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit">Submit Feedback</button>
+      </form>
     </div>
-	</div>
+  </div>
+
+  <!-- ✅ NEW: Success Modal (Bootstrap) -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true" aria-labelledby="successModalLabel">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center p-4">
+          <div class="display-6 mb-2">✅ Success!</div>
+          <p class="mb-0">Your feedback was submitted successfully.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Button builder script (unchanged except minor cleanup) -->
   <script>
     // Create the button
     const button = document.createElement("button");
     button.textContent = "Click here to request information";
-    button.className = "btn btn-primary"; 
+    button.className = "btn btn-primary";
     button.type = "button";
 
     // Default styling
-    button.style.transition = "all 0.3s ease";  // smooth effect
+    button.style.transition = "all 0.3s ease";
 
     // Hover in (mouse over)
     button.addEventListener("mouseenter", () => {
-      button.style.backgroundColor = "#0057b3"; // darker blue
-      button.style.transform = "scale(1.05)";  // slight grow
+      button.style.backgroundColor = "#0057b3";
+      button.style.transform = "scale(1.05)";
       button.style.boxShadow = "0px 4px 12px rgba(0,0,0,0.2)";
     });
 
     // Hover out (mouse leave)
     button.addEventListener("mouseleave", () => {
-      button.style.backgroundColor = "#0d5efd"; // Bootstrap default
+      button.style.backgroundColor = "#0d5efd";
       button.style.transform = "scale(1)";
       button.style.boxShadow = "none";
     });
@@ -270,14 +217,35 @@ button[type="submit"]:hover {
     button.addEventListener("click", () => {
       window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSe_eF86cZVBiQ17LmC6guifYMDnwLdOK2tEmn0IdoU98z37UA/viewform?usp=header";
     });
-	  
-	  
+
     // Insert into page
     document.getElementById("button-container").appendChild(button);
   </script>
-		
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ✅ NEW: Form handler to show modal and auto-close after 5s -->
+  <script>
+    (function () {
+      const form = document.getElementById("feedbackForm");
+      const modalEl = document.getElementById("successModal");
+      const bsModal = new bootstrap.Modal(modalEl, { backdrop: true, keyboard: true });
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // TODO: If you post to a server, do your fetch() here, then show the modal on success.
+        // For now, just show the success modal immediately:
+        form.reset();
+        bsModal.show();
+
+        // Auto-hide after 5 seconds
+        setTimeout(() => {
+          bsModal.hide();
+        }, 5000);
+      });
+    })();
+  </script>
 </body>
 </html>
