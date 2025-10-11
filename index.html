@@ -61,7 +61,21 @@
       font-family: Tahoma, sans-serif;
       color: lightseagreen;
     }
-
+	  /* Successful Submission */
+#successMessage {
+      display: none;
+      margin-top: 15px;
+      padding: 10px;
+      border: 1px solid #4CAF50;
+      background-color: #DFF2BF;
+      color: #4F8A10;
+      border-radius: 8px;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
     .contactme {
       font-family: Georgia, serif;
       font-weight: bold;
@@ -149,6 +163,7 @@ button[type="submit"]:hover {
 
   <!-- Page Content -->
   <div class="container">
+	</div>
     <div class="content-box">
       <h1>Welcome to Sun, Sand & Fantasy Land Vacations</h1>
       <p class="text">Planning a trip should be as exciting as the getaway itself, and I am here to make the process smooth, fun, and tailored just for you.</p>
@@ -164,7 +179,7 @@ button[type="submit"]:hover {
       <p class="text">Let's create your next adventure — one that is full of connection, joy, and a little magic.</p>
 	  </div>
       <!-- Button to Form -->
-      <div class="text-center mt-4">
+	<div class="text-center mt-4"></div>
         <div id="button-container" class="text-center mt-4"></div>
 	
 		  
@@ -174,14 +189,15 @@ button[type="submit"]:hover {
 		  
 		  <p>
 		  </p>
-		 <div class="content-box">
+<div class="content-box">
 		  <h3>Testimonials</h3>
       <p class="text">If you have ever booked travel with me, I would love to hear from you and how your travel experience was. Please leave your name, email, what services you booked with me, and your honest feedback. </p>
 	  
 	  <p class="text">Anyone who leaves a testimonial is entered into a contest for the month of the entry to earn a $25 gift card from me.</p>
 		  
       <!--Testimonaial Feedback Form--> 
-		  <title>Feedback Form</title>
+	<form id="feedbackForm">	 
+	<title>Feedback Form</title>
     <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file for styling -->
 </head>
 <body>
@@ -217,12 +233,26 @@ button[type="submit"]:hover {
             <button type="submit">Submit Feedback</button>
         </form>
 		
-		<div id="successMessage" style="display: none;">
-  <h4>Thank you!</h4>
-  <p>Your feedback has been successfully submitted.</p>
-</div>
+		<div id="successMessage">✅ Your form was submitted successfully!</div>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event){
+      event.preventDefault(); // Prevent page reload
+
+      // Display the success message
+      const msg = document.getElementById("successMessage");
+      msg.style.display = "block";
+
+      // Optionally clear form fields
+      this.reset();
+
+      // Optionally hide message after 5 seconds
+      setTimeout(() => {
+        msg.style.display = "none";
+      }, 5000);
+    });
+		
     </div>
-	
 	</div>
   <script>
     // Create the button
