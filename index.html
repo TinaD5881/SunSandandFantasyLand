@@ -232,25 +232,13 @@ button[type="submit"]:hover {
 
             <button type="submit">Submit Feedback</button>
         </form>
-		
-		<div id="successMessage">✅ Your form was submitted successfully!</div>
-
-  <script>
-    document.getElementById("contactForm").addEventListener("submit", function(event){
-      event.preventDefault(); // Prevent page reload
-
-      // Display the success message
-      const msg = document.getElementById("successMessage");
-      msg.style.display = "block";
-
-      // Optionally clear form fields
-      this.reset();
-
-      // Optionally hide message after 5 seconds
-      setTimeout(() => {
-        msg.style.display = "none";
-      }, 5000);
-    });
+		<script>
+  document.getElementById("contactForm").addEventListener("submit", function(event){
+    event.preventDefault(); // Stop normal submission
+    alert("✅ Your form was submitted successfully!");
+    this.reset(); // Clear the form
+  });
+</script>
 		
     </div>
 	</div>
