@@ -139,11 +139,10 @@
     <p class="text">If you have ever booked travel with me, I would love to hear from you and how your travel experience was. Please leave your name, email, what services you booked with me, and your honest feedback. </p>
     <p class="text">Anyone who leaves a testimonial is entered into a contest for the month of the entry to earn a $25 gift card from me.</p>
 
-    <!-- ✅ FIXED: one single form with an ID we can target -->
+    <!-- Form -->
     <div class="container">
       <h2>Provide Your Feedback</h2>
 
-      <!-- CHANGED: removed nested <form> and kept a single form with id="feedbackForm" -->
       <form id="feedbackForm" method="POST" action="#">
         <div class="form-group mb-3">
           <label for="name">Name:</label>
@@ -176,19 +175,19 @@
     </div>
   </div>
 
-  <!-- ✅ NEW: Success Modal (Bootstrap) -->
+  <!-- Success Modal (Bootstrap) -->
   <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true" aria-labelledby="successModalLabel">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body text-center p-4">
-          <div class="display-6 mb-2">✅ Success!</div>
+          <div class="display-6 mb-2">Success!</div>
           <p class="mb-0">Your feedback was submitted successfully.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Button builder script (unchanged except minor cleanup) -->
+  <!-- Button script  -->
   <script>
     // Create the button
     const button = document.createElement("button");
@@ -199,14 +198,14 @@
     // Default styling
     button.style.transition = "all 0.3s ease";
 
-    // Hover in (mouse over)
+    // Mouse Hover in 
     button.addEventListener("mouseenter", () => {
       button.style.backgroundColor = "#0057b3";
       button.style.transform = "scale(1.05)";
       button.style.boxShadow = "0px 4px 12px rgba(0,0,0,0.2)";
     });
 
-    // Hover out (mouse leave)
+    // Mouse Hover out 
     button.addEventListener("mouseleave", () => {
       button.style.backgroundColor = "#0d5efd";
       button.style.transform = "scale(1)";
@@ -235,8 +234,8 @@
       form.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        // TODO: If you post to a server, do your fetch() here, then show the modal on success.
-        // For now, just show the success modal immediately:
+        
+        // Show the success modal immediately:
         form.reset();
         bsModal.show();
 
