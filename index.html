@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -55,6 +56,16 @@
       color: #1c398e;
       text-align: center;
     }
+    h4 {
+      font-family: 'Quicksand', serif;        /* classy + readable */
+      color: coral;                         /* matches your coral accents */
+      text-align: center;                   /* keep consistent with other headings */
+      letter-spacing: 0.5px;                  /* subtle spacing for polish */
+      font-weight: bold;                    /* gives it emphasis */
+      font-size: 1.6rem;                    /* slightly larger for visibility */
+      margin-top: 25px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15); /* soft depth effect */
+}
 
     .text { color: lightseagreen; }
 
@@ -140,7 +151,7 @@
     <p class="text">Anyone who leaves a testimonial is entered into a contest for the month of the entry to earn a $25 gift card from me.</p>
 
     <!-- Form -->
-    <div class="container">
+	  <div class="container"> 
       <h2>Provide Your Feedback</h2>
 
       <form id="feedbackForm" method="POST" action="#">
@@ -172,6 +183,12 @@
 
         <button type="submit">Submit Feedback</button>
       </form>
+		
+		 <!-- Display Feedback -->
+		<div class="content-box">
+<h4 class="mb-5">What others have said about their travel experience with <i>Sun, Sand and Fantasy Land Vacations</i>:</h4>
+<div id="testimonialsList" class="row g-3"></div>
+
     </div>
   </div>
 
@@ -224,7 +241,7 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- ✅ NEW: Form handler to show modal and auto-close after 5s -->
+  <!-- Form handler to show modal and auto-close after 5s -->
   <script>
     (function () {
       const form = document.getElementById("feedbackForm");
